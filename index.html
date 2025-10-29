@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mihiret Gisime | Portfolio</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="CSS/photo.jpg">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-pVnbI4fWZJ3F2o8d4L5t9kY4qOrw6V8TuBhHh3rKXONN8WrL1G8IhZB25z0R9sm7DmcxXkKZaK+3dZY3bo6x9Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">My Portfolio</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="home" class="home">
+    <div class="home-content">
+      <h1>Hello, I'm <span>Mihiret Gisime</span></h1>
+      <h2>Front-End Developer in the Making 💻</h2>
+      <p>I'm a Computer Science student passionate about creating beautiful, responsive web designs and bringing ideas to life in the browser.</p>
+    </div>
+    <div class="home-image">
+      <img src="CSS/photo.jpg" alt="Mihiret Gisime Photo">
+    </div>
+  </section>
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      Hi! I'm <strong>Mihiret Gisime</strong>, a third-year Computer Science student at the <br>
+      <strong>University of Gondar</strong>.<br> I love exploring how technology can make life easier and more enjoyable.
+    </p>
+    <p>
+      My passion is in <strong>front-end web development</strong> — turning ideas into interactive,<br> user-friendly websites using 
+      <strong>HTML, CSS, and JavaScript</strong>.
+    </p>
+    <p>
+      Outside of coding, I enjoy learning new tools and <br>constantly improving my problem-solving skills. <br>
+      My goal is to become a skilled front-end developer<br> who builds intuitive and<br> accessible web applications.
+    </p>
+  </section>
+  <section id="skills" class="skills">
+     <h2> My Skills</h2> 
+     <p >HTML</p> 
+     <p>CSS</p> <p>C++</p> 
+    </section>
+  <section id="contact" class="contact">
+  <h2>Contact Me</h2>
+  <div class="contact-container">
+    <div class="contact-info">
+      <div class="info-item">
+        <i class="fa-solid fa-envelope"></i>
+         <p>Email: <a href="mailto:mihretgisimie@gmail.com">mihretgisimie@gmail.com</a></p>
+      </div>
+      <div class="info-item">
+        <i class="fa-brands fa-linkedin"></i>
+            <p>LinkedIn: <a href="https://linkedin.com/in/-------" target="_blank">LinkedIn Profile</a></p>
+      </div>
+      <div class="info-item">
+        <i class="fa-brands fa-github"></i>
+         <p>GitHub: <a href="https://github.com/mihretgisimie-cpu" target="_blank">mihretgisimie-cpu</a></p>
+      </div>
+      <div class="info-item">
+        <i class="fa-solid fa-phone"></i>
+           <p>phone:  <a href="tel:+251918781702">+251 918 781 702</a></p>
+      </div>
+    </div>
+    <form action="https://formspree.io/f/yourFormID" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="_replyto" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+  <footer>
+    <p>&copy; <span id="year"></span> Mihiret Gisimie. All rights reserved.</p>
+  </footer>
+  <button id="scrollTopBtn"><i class="fa-solid fa-arrow-up"></i></button>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+    const icon = menuToggle.querySelector('i');
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      icon.classList.toggle('fa-times');
+      icon.classList.toggle('fa-bars');
+    });
+
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    window.addEventListener("scroll", () => {
+      scrollTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+    scrollTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
